@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         app = 'frontend'
-        GIT_URL = 'https://github.com/lakshmikanth324/Jenkins_shared.git'
+        GIT_URL = 'https://github.com/lakshmikanth324/mern_3tire.git'
         GIT_BRANCH = 'main'
         GIT_CREDIANTIALS =  'github_id'
         IMAGE_NAME = 'lkmrinfo/backend'
