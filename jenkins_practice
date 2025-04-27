@@ -26,6 +26,7 @@ pipeline {
                 script { 
                     sh '''
                         ls -lrt
+                        cd backend
                         docker --version
                     '''
                     dir('./backend') {
