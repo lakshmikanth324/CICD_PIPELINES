@@ -4,7 +4,7 @@ pipeline {
         app = 'frontend'
         GIT_URL = 'https://github.com/lakshmikanth324/mern_3tire.git'
         GIT_BRANCH = 'main'
-        GIT_CREDIANTIALS =  'github_id'
+        GIT_CREDIANTIALS = 'github_id'
         IMAGE_NAME = 'lkmrinfo/backend'
         IMAGE_TAG = 'latest'
         DOCKERFILE_BASE = 'Dockerfile'
@@ -17,7 +17,7 @@ pipeline {
                 script {
                     git branch: "${env.GIT_BRANCH}",
                         credentialsId: "${env.GIT_CREDIANTIALS}",
-                            url: "${env.GIT_URL}"
+                        url: "${env.GIT_URL}"
                 }
             }
         }
@@ -33,9 +33,8 @@ pipeline {
                             dockerImage.push() 
                         }
                     }
+                }  // <-- Missing closing brace for `script` block
             }
         }
-    }
-
-}
-}
+    }  // <-- Closing `stages` block
+}  // <-- Closing `pipeline` block
